@@ -13,15 +13,19 @@ npm install
 
 ### Important commands
 
+```
 - Started prisma studio => npx prisma studio
 - Started project => npm run dev
 - Create migration => npx prisma migrate dev --name
 - Delete directory => npx rimraf prisma/example
 - Populate db =>  npx prisma db seed --preview-feature
+```
 
 ### Technology Used
+```
 - Typescript
 - Apollo server
 - graphQL
 - Prisma
+```
 
