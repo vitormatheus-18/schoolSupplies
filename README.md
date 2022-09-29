@@ -15,5 +15,6 @@ npm install
 - Started prisma studio => npx prisma studio
 - Started project => npm run dev
 - Create migration => npx prisma migrate dev --name
+- Delete directory => npx rimraf prisma/example
 
 
