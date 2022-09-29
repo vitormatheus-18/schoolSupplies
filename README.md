@@ -16,5 +16,6 @@ npm install
 - Started project => npm run dev
 - Create migration => npx prisma migrate dev --name
 - Delete directory => npx rimraf prisma/example
+- Populate db =>  npx prisma db seed --preview-feature
 
 
