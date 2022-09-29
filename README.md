@@ -10,6 +10,7 @@ Navigate into the project directory and install the npm dependencies with the fo
 ```
 npm install
 ```
+
 ### Important commands
 
 - Started prisma studio => npx prisma studio
@@ -18,4 +19,9 @@ npm install
 - Delete directory => npx rimraf prisma/example
 - Populate db =>  npx prisma db seed --preview-feature
 
+### Technology Used
+- Typescript
+- Apollo server
+- graphQL
+- Prisma
 
