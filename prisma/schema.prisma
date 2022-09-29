@@ -1,0 +1,49 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+model Material {
+  id Int @id @default(autoincrement())
+  name String 
+  quantity Int @default(0)
+  educationalUnity EducationalUnity? @relation(fields: [idEducationalUnity], references: [id])
+  idEducationalUnity Int?
+  disciplines Discipline[]
+}
+model Class {
+  id Int @id @default(autoincrement())
+  studentsQuantity Int
+  educationalUnities EducationalUnity[]
+  student Student? @relation(fields: [studentId], references: [id])
+  studentId Int?
+
+}
+model Teacher {
+  id Int @id @default(autoincrement())
+  name String
+  disciplines Discipline[]
+}
+model EducationalUnity {
+  id Int @id @default(autoincrement())
+  name String
+  class Class? @relation(fields: [classId], references: [id])
+  classId Int?
+  materials Material[]
+}
+model Student {
+  id Int @id @default(autoincrement())
+  name String
+  classes Class[]
+}
+model Discipline {
+  id Int @id @default(autoincrement())
+  name String
+  material Material? @relation(fields: [materialId], references: [id])
+  materialId Int?
+  teacher Teacher? @relation(fields: [teacherId], references: [id])
+  teacherId Int?
+}
