@@ -23,25 +23,25 @@ async function main() {
   //     name: 'Juliana Guimarães',
   //   },
   // });
-  //Criando com relacionamento
-  // const query = await prisma.discipline.create({
-  //   data: {
-  //     name: 'Desenho técnico',
-  //     material: {
-  //       create: {
-  //         name: 'Papel milimetrado',
-  //         quantity: 30,
-  //       },
-  //     },
-  //     teacher: {
-  //       create: {
-  //         name: 'Orlando Carvalho',
-  //       },
-  //     },
-  //   },
-  // });
-  // console.log(query);
-}
+//   // Criando com relacionamento
+//   const query = await prisma.discipline.create({
+//     data: {
+//       name: 'Desenho técnico',
+//       material: {
+//         create: {
+//           name: 'Papel milimetrado',
+//           quantity: 30,
+//         },
+//       },
+//       teacher: {
+//         create: {
+//           name: 'Orlando Carvalho',
+//         },
+//       },
+//     },
+//   });
+//   console.log(query);
+// }
 
 main()
   .catch(e => {
