@@ -6,6 +6,8 @@ import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-co
 const typeDefs = `
 type Query {
     allMaterials: [Material]!
+    allTeachers: [Teacher]!
+    allDisciplines: [Discipline]!
     disciplineById(id: Int!): Discipline
 }
 
@@ -55,6 +57,12 @@ const resolvers = {
         allMaterials: (_parent, _args, context: Context) => {
             return context.prisma.material.findMany();
         },
+        allTeachers: (_parent, _args, context: Context) => {
+            return context.prisma.teacher.findMany();
+        },
+        allDisciplines: (_parent, _args, context: Context) => {
+            return context.prisma.discipline.findMany();
+        }
     },
 };
 

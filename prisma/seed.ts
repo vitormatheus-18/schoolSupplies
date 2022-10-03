@@ -6,11 +6,13 @@ import { Prisma, PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
-  for (let teacher of teachers) {
-    await prisma.teacher.create({
-      data: teacher
+  for (let discipline of disciplines) {
+    await prisma.discipline.create({
+      data: discipline
     })
+    console.log(`Created user with id: ${discipline.name}`)
   }
+  console.log(`Seeding finished.`)
 }
 
 main().catch(e => {
